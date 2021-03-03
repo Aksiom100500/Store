@@ -1,0 +1,26 @@
+// rubber
+@media (min-width: 1200px) {
+  :root{
+    --media-breakdown: 1920*100vw;
+  }
+}
+@media (max-width: 1199px) {
+  :root{
+    --media-breakdown: 1660*100vw;
+  }
+}
+@media (max-width: 991px) {
+  :root{
+    --media-breakdown: 1.2*1px;
+  }
+}
+@media (max-width: 768px) {
+  :root{
+    --media-breakdown: 1.4*1px;
+  }
+}
+
+@function rpx($var){
+  $result: calc(#{$var}/var(--media-breakdown));
+  @return $result;
+}

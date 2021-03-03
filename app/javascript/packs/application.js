@@ -8,6 +8,24 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+import '../../assets/stylesheets/components/components.scss'
+
+import TurbolinksAdapter from 'vue-turbolinks'
+import Vue from 'vue/dist/vue.esm'
+import App from '../components/app.vue'
+
+Vue.use(TurbolinksAdapter)
+
+document.addEventListener('turbolinks:load', () => {
+  const el = document.body.appendChild(document.createElement('application'))
+  const app = new Vue({
+    el,
+    render: h => h(App)
+  })
+
+  console.log(app)
+})
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

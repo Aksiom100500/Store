@@ -1,0 +1,23 @@
+.products{
+  @apply grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1;
+}
+.product{
+  @apply text-center overflow-hidden flex align-middle flex-col p-4;
+  .img{
+    position: relative;
+    @apply mb-4 flex justify-center align-middle rounded-lg overflow-hidden h-80;
+    img{
+    }
+    &:hover{
+      &:after{
+        @apply opacity-0;
+      }
+    }
+    &:after{
+      @apply transition-all duration-300 opacity-100;
+    }
+  }
+  .content{
+
+  }
+}
