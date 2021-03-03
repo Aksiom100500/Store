@@ -8,7 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-require("stylesheets/application.scss")
+import '../../assets/stylesheets/components/components.scss'
 
 import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
@@ -17,7 +17,7 @@ import App from '../components/app.vue'
 Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
-  // const el = document.body.appendChild(document.createElement('application'))
+  const el = document.body.appendChild(document.createElement('application'))
   const app = new Vue({
     el,
     render: h => h(App)

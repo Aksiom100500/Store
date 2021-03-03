@@ -1,0 +1,12 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "../base/mixin";
+@import "../base/normalize";
+@import "../base/variables";
+@import "body";
+@import "aside";
+@import "buttons";
+@import "footer";
+@import "header";
+@import "nav";

@@ -10,6 +10,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "components/header" %>
+    <div class="main-wrap">
+      <%= render "components/aside" %>
+      <%= render "components/main" %>
+    </div>
+    <%= render "components/footer"%>
   </body>
 </html>
